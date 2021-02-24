@@ -1,0 +1,56 @@
+server:
+  port: 8150 # 订单支付模块服务端口:
+
+# 项目的服务名
+spring:
+  application:
+    name: service-ucenter
+
+# 环境的配置: dev 开发 test 测试  prod生产
+  profiles:
+    active: dev
+
+# mysql 数据库的配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli?serverTimezone=GMT%2B8
+    username: root
+    password:
+
+# redis 缓存型数据配置信息
+  redis:
+    host: 101.200.120.89
+    port: 6379
+    database: 0
+    timeout: 1800000
+
+
+# 空闲对象退出线程的运行之间的时间。当为正时，空闲*对象驱逐线程启动，否则不执行空闲对象驱逐
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+#最大阻塞等待时间(负数表示没限制)
+        max-idle: 5
+        min-idle: 0
+
+# nacos服务地址 在客户端微服务中添加注册Nacos服务的配置信息
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+#mybatis日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#配置mapper xml文件的路径
+  mapper-locations: classpath:com/atguigu/educenter/mapper/xml/*.xml
+
+
+
+
+
+
+

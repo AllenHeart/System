@@ -1,0 +1,43 @@
+server:
+  port: 8008 # 统计分析服务端口号
+
+# 项目服务名
+spring:
+  application:
+    name: service-statistics
+
+# mysql数据库连接配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli?serverTimezone=GMT%2B8
+    username: root
+    password:
+
+    # nacos服务地址 在客户端微服务中添加注册Nacos服务的配置信息
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+#返回json的全局时间格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+#配置mapper xml文件的路径
+mybatis-plus:
+  mapper-locations: classpath:com/atguigu/staservice/mapper/xml/*.xml
+
+#mybatis日志
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#开启熔断机制
+feign:
+  hystrix:
+    enabled: true
+
+# 设置hystrix超时时间，默认1000ms
+hystrix:
+  metrics:
+    polling-interval-ms: 3000

@@ -1,0 +1,28 @@
+server:
+  port: 8003 #aliyun 的视频上传的服务端口号
+
+# 项目的服务名
+spring:
+  application:
+    name: service-vod
+
+# 环境的配置: dev 开发 test 测试  prod生产
+  profiles:
+    active: dev
+
+# 最大上传<单>个文件大小.默认 1M 兆 1*1024*1024
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+
+# 最大置<总>上传的数据大小.默认是 10M 兆
+      max-request-size: 1024MB
+
+# nacos服务地址 在客户端微服务中添加注册Nacos服务的配置信息
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+
+

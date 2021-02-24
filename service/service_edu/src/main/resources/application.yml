@@ -1,0 +1,50 @@
+server:
+  port: 8001 #教学相关api接口服务
+
+spring:
+  application:
+    name: service-edu # 项目的服务名
+
+  profiles:
+    active: dev # 环境的配置: dev 开发 test 测试  prod生产
+
+# mysql 数据库的配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli?serverTimezone=GMT%2B8
+    username: root
+    password:
+
+# nacos服务地址 在客户端微服务中添加注册Nacos服务的配置信息
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+# 返回 Json的全局时间格式配置当前时间
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+## 设置日志级别
+##logging.level.root=WARN   WARN INFO ERROR DEBUG
+#### Mybatis_plus 配置日志打印
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#配置mapper xml文件的路径
+  mapper-locations: classpath:com/atguigu/eduservice/mapper/xml/*.xml
+
+#开启熔断机制
+feign:
+  hystrix:
+    enabled: true
+
+# 设置hystrix超时时间，默认1000ms
+#hystrix:
+#  metrics:
+#    polling-interval-ms: 6000
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=6000
+
+

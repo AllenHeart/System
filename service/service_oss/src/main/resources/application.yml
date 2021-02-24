@@ -1,0 +1,17 @@
+server:
+  port: 8002 # aliyun的对象存储服务的端口号
+
+# 项目的服务名
+spring:
+  application:
+    name: service-oss
+
+# 环境的配置: dev 开发 test 测试  prod生产
+  profiles:
+    active: dev
+
+# nacos服务地址 在客户端微服务中添加注册Nacos服务的配置信息
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848

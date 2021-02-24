@@ -1,0 +1,12 @@
+业务调度层
+一: service_edu 子子模块 编写讲师业务层
+  1: 讲师管理模块配置
+  2: 在service下面service-edu模块中创建配置文件
+  3: resources目录下创建文件 application.properties
+
+二: 编写业务调度内容
+  1: Controller 控制器
+  2: Service 业务接口  serviceImpl业务实现类
+  3: Mapper 数据源操作映射
+
+  4: 使用 Mybatis_plus 代码生产器.相关相关代码

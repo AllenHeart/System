@@ -1,0 +1,65 @@
+swagger 框架配置
+一: Swagger 简介:
+    1: 及时性
+    2: 规范性
+    3: 一直性
+    4: 可测性
+
+二: 配置 Swagger2
+    1: 创建 common 公共模块
+    2: 配置添加 Maven jar 包
+
+      <dependencies>
+            <dependency>
+
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <scope>provided </scope>
+            </dependency>
+
+            <!--mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <scope>provided </scope>
+            </dependency>
+
+            <!--lombok用来简化实体类：需要安装lombok插件-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <scope>provided </scope>
+            </dependency>
+
+            <!--swagger-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <scope>provided </scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <scope>provided </scope>
+            </dependency>
+
+            <!-- redis -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+            </dependency>
+
+            <!-- spring2.X集成redis所需common-pool2
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>2.6.0</version>
+            </dependency>-->
+
+        </dependencies>
+
+三: 在 common 下面创建子子模块: service_base 子子模块公共实现框架
+    1: 创建 com.atguigu.servicebase 包
+    2: 创建SwaggerConfig 配置类
+    3:

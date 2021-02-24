@@ -1,0 +1,20 @@
+server:
+  port: 10000 #Canal 数据同步的服务端口号
+
+# 项目服务名
+spring:
+  application:
+    name: canal-clientedu
+
+# 环境设置：dev、test、prod
+  profiles:
+    active: dev
+
+# mysql数据库连接配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli?serverTimezone=GMT%2B8
+    username: root
+    password:
+
+

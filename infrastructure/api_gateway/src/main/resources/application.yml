@@ -1,0 +1,61 @@
+#server:
+#  port: 8222 # Spring CloudGateWay 微服务的网关服务端口号
+#
+## 项目的服务名
+#spring:
+#  application:
+#    name: service-gateway
+#
+## nacos服务地址 在客户端微服务中添加注册Nacos服务的配置信息
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true #开启从注册中心动态创建路由的功能
+#          lower-case-service-id: true #使用小写服务名，默认是大写
+#      routes:
+#        - id: service-edu
+#          url: lb://service-edu
+#          predicates:
+#           - Path=/*/edu/**
+#        - id: service-oss
+#          url: lb://service-oss
+#          predicates:
+#           - Path=/*/oss/**
+#        - id: service-vod
+#          url: lb://service-vod
+#          predicates:
+#            - Path=/*/vod/**
+#        - id: service-cms
+#          url: lb://service-cms
+#          predicates:
+#           - Path=/*/cms/**
+#        - id: service-msm
+#          url: lb://service-msm
+#          predicates:
+#            - Path=/*/msm/**
+#        - id: service-ucenter
+#          url: lb://service-ucenter
+#          predicates:
+#            - Path=/*/ucenter/**
+#        - id: service-order
+#          url: lb://service-order
+#          predicates:
+#            - Path=/*/order/**
+#        - id: service-statistics
+#          url: lb://service-statistics
+#          predicates:
+#            - Path=/*/statistics/**
+#        - id: service-acl
+#          url: lb://service-acl
+#          predicates:
+#            - Path=/*/acl/**
+#
+## gateWay 日志打印
+#logging:
+#  level:
+#     org.springframework.cloud.gateway: debug
