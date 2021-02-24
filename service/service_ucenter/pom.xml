@@ -11,6 +11,7 @@
 
     <description>用户会员api接口服务</description>
     <artifactId>service_ucenter</artifactId>
+    <name>用户会员接口服务</name>
 
     <dependencies>
         <!--httpclient-->

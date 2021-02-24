@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <description>cms 前段页面服务</description>
+    <description>cms 前端页面服务</description>
     <artifactId>service_cms</artifactId>
-
+    <name>前端业务模块</name>
 
 </project>

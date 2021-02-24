@@ -11,6 +11,7 @@
 
     <description>订单相关api接口服务</description>
     <artifactId>service_order</artifactId>
+    <name>订单相关的 api接口模块</name>
 
     <dependencies>
 

@@ -12,7 +12,8 @@
 
     <description>工具类模块，所有模块都可以依赖于它</description>
 
-        <artifactId>common_utils</artifactId>
+    <artifactId>common_utils</artifactId>
+    <name>工具类模块</name>
 
     <dependencies>
 

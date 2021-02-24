@@ -11,6 +11,7 @@
 
     <description>阿里巴巴 MySQL binlog 增量订阅 消费组件</description>
     <artifactId>canal_clientedu</artifactId>
+    <name>canal数据库表同步模块（统计同步数据）</name>
 
     <dependencies>
         <!--SpringBoot框架 web 起步依赖-->

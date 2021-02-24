@@ -12,7 +12,8 @@
 
     <description>base：service服务的base包，包含service服务的公共配置类，所有service模块依赖于它</description>
 
-                       <artifactId>service_base</artifactId>
+    <artifactId>service_base</artifactId>
+    <name>公共配置类</name>
 
     <!--导入依赖 common-com.atguigu.vod.utils 公共返回数据格式-->
     <dependencies>

@@ -6,6 +6,7 @@
 
 <!--模块的 pom 类型-->
     <packaging>pom</packaging>
+    <name>在线教育的父工程</name>
 
     <modules>
         <module>service</module>

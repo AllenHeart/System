@@ -8,10 +8,12 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <name>网关模块</name>
 
     <description>Spring Cloud GateWay模块 (网关服务)</description>
     <artifactId>infrastructure</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>api_gateway</module>
     </modules>

@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <description>aliyun 的短信服务</description>
+    <name>阿里云的短信服务</name>
 
     <artifactId>service_msm</artifactId>
 

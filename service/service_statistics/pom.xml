@@ -11,6 +11,7 @@
 
     <description>统计分析模块</description>
     <artifactId>service_statistics</artifactId>
+    <name>统计分析模块</name>
 
     <!--Nacos 的配置中心-->
     <!--<dependencies>-->

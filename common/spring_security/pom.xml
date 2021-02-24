@@ -11,6 +11,7 @@
 
     <description>应用程序提供身份验证，授权和其他安全功能.权限框架</description>
     <artifactId>spring_security</artifactId>
+    <name>安全框架</name>
 
     <dependencies>
 

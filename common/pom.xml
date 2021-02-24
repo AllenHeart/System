@@ -11,6 +11,7 @@
 
     <description>公共模块父节点</description>
     <artifactId>common</artifactId>
+    <name>公共模块父节点</name>
 
 <!--模块 pom 类型-->
     <packaging>pom</packaging>

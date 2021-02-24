@@ -12,6 +12,7 @@
 
     <description>用户的权限管理模块</description>
     <artifactId>service_acl</artifactId>
+    <name>用户的权限管理模块</name>
 
     <dependencies>
 
